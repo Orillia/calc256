@@ -1,0 +1,9 @@
+#!/bin/sh
+# This script is run after the package is unpacked.
+
+set -e
+
+# Source debconf library.
+# . /usr/share/debconf/confmodule
+
+invoke-rc.d cgminer restart

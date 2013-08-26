@@ -1,0 +1,23 @@
+#!/bin/bash
+# This script is run after the package is removed.
+
+set -e
+
+if [ "$1" = "purge" -a -e /usr/share/debconf/confmodule ]; then
+    # Source debconf library.
+    . /usr/share/debconf/confmodule
+    # Remove my changes to the db.
+    db_purge
+fi
+
+if [ "$1" = "remove" ]; then
+
+# Source debconf library.
+. /usr/share/debconf/confmodule
+
+# remove cgminer start script
+update-rc.d -f cgminer remove
+
+# Remove my changes to the db.
+db_purge
+fi

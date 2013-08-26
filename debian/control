@@ -1,0 +1,11 @@
+Source: cgminer
+Section: devel
+Priority: optional
+Maintainer: Ivan Vershigora <ivan.vershigora@gmail.com>
+Standards-Version: 3.8.1
+Homepage: http://metabank.ru
+
+Package: cgminer
+Architecture: armhf
+Depends:
+Description: Cgminer is customized miner that work with bitfury chips

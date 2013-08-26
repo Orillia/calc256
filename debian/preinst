@@ -1,0 +1,10 @@
+#!/bin/bash
+# This script is run before the package gets installed
+
+set -e
+
+# stop chminer server
+if [ -f /etc/init.d/chminer ]
+then
+  invoke-rc.d chminer stop
+fi
